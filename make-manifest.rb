@@ -36,6 +36,6 @@ confirmStructure(target)
 outputArray = []
 @isobusterReports.sort.each {|report| outputArray << getIsoContents(report)}
 
-File.open("#{target}/metadata/#{File.basename(target)}-file-manifest.txt", "w+") do |f|
+File.open("#{target}/metadata/Manifest_#{File.basename(target)}.txt", "w+") do |f|
   outputArray.each { |line| f.puts(line) }
 end
